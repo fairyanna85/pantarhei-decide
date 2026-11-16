@@ -1,0 +1,1407 @@
+{
+ "skill": "pantarhei-decide",
+ "schema": "core/schema/method.schema.json",
+ "count": 36,
+ "records": [
+  {
+   "slug": "decide.decision-quality",
+   "name": "Decision quality chain",
+   "kind": "model",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Carl Spetzler, Hannah Winter, Jennifer Meyer",
+    "work": "Decision Quality",
+    "type": "industry",
+    "year": 2016
+   },
+   "source_verified": false,
+   "summary": "A good decision has six links: an appropriate frame, creative alternatives, relevant information, clear values and trade-offs, sound reasoning, and commitment to act. The weakest link sets the quality.",
+   "key_question": "Which of the six links in this decision is weakest?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "is this a good decision",
+    "check our decision process",
+    "what are we missing before we decide",
+    "audit this decision"
+   ],
+   "produces": "a rating of the six links with the weakest one named and what would strengthen it",
+   "failure_mode": "Rating every link as strong because the preferred option is already chosen.",
+   "time_cost": "medium",
+   "group": "either",
+   "pairs_with": [
+    "decide.wrap",
+    "decide.value-of-information"
+   ]
+  },
+  {
+   "slug": "decide.wrap",
+   "name": "WRAP",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Chip Heath & Dan Heath",
+    "work": "Decisive",
+    "type": "practitioner",
+    "year": 2013
+   },
+   "source_verified": false,
+   "summary": "Widen your options, reality-test your assumptions, attain distance before deciding, prepare to be wrong. Each step targets a documented decision bias.",
+   "key_question": "Which of widen, reality-test, distance or prepare have I skipped?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "help me decide properly",
+    "I need a decision process",
+    "avoid the usual decision mistakes",
+    "big decision coming up"
+   ],
+   "produces": "a decision record with widened options, reality checks, a distanced view and a plan for being wrong",
+   "failure_mode": "Running the four steps as a checklist after the choice is already made.",
+   "time_cost": "medium",
+   "group": "either",
+   "steps": [
+    "Widen your options: add at least one option beyond the current either/or.",
+    "Reality-test your assumptions: look for disconfirming evidence and small experiments.",
+    "Attain distance: ask what you would advise a friend and how you will see it later.",
+    "Prepare to be wrong: set tripwires and a range of outcomes."
+   ],
+   "pairs_with": [
+    "decide.vanishing-options",
+    "decide.kill-criteria"
+   ]
+  },
+  {
+   "slug": "decide.vanishing-options",
+   "name": "Vanishing options test",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Chip Heath & Dan Heath",
+    "work": "Decisive",
+    "type": "practitioner",
+    "year": 2013
+   },
+   "source_verified": false,
+   "summary": "Imagine every option currently on the table is forbidden. What would you do then? Exposes options that narrow framing hid.",
+   "key_question": "If none of my current options were allowed, what would I do?",
+   "status": "complete",
+   "tension_with": [
+    "decide.satisficing"
+   ],
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "should I do this or not",
+    "I only have two options",
+    "this or that",
+    "I can't see any other choices"
+   ],
+   "produces": "new options found after imagining the current ones forbidden",
+   "failure_mode": "Generating only small variants of the forbidden options.",
+   "time_cost": "quick",
+   "group": "either",
+   "steps": [
+    "List the options currently on the table.",
+    "Imagine every one of them is no longer possible.",
+    "Ask what you would do instead and write at least three answers.",
+    "Add the strongest new options to the list."
+   ],
+   "pairs_with": [
+    "decide.weighted-criteria",
+    "create.diverge-then-converge"
+   ]
+  },
+  {
+   "slug": "decide.expected-value",
+   "name": "Expected value",
+   "kind": "model",
+   "mode": "lens",
+   "evidence_class": "formal",
+   "origin": {
+    "author": "Probability theory (Pascal, Huygens)",
+    "work": "De Ratiociniis in Ludo Aleae",
+    "type": "academic",
+    "year": 1657
+   },
+   "source_verified": false,
+   "summary": "Multiply each outcome by its probability and add them up. Shows which option is best on average, and makes the probabilities you are assuming explicit.",
+   "key_question": "What is each option worth on average, and which probabilities am I assuming?",
+   "status": "complete",
+   "tension_with": [
+    "decide.regret-minimization",
+    "mm.margin-of-safety"
+   ],
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "what's the best bet",
+    "weigh the odds",
+    "which option pays off on average",
+    "is this gamble worth it"
+   ],
+   "produces": "a table of outcomes, probabilities and payoffs per option with the expected value of each",
+   "failure_mode": "Using made-up precise probabilities and treating the result as settled; ignoring ruinous tails.",
+   "time_cost": "medium",
+   "group": "either",
+   "pairs_with": [
+    "decide.decision-tree",
+    "decide.value-of-information"
+   ]
+  },
+  {
+   "slug": "decide.decision-tree",
+   "name": "Decision tree",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "formal",
+   "origin": {
+    "author": "Howard Raiffa",
+    "work": "Decision Analysis",
+    "type": "academic",
+    "year": 1968
+   },
+   "source_verified": false,
+   "summary": "Map choices, chance events and outcomes in sequence and roll back from the end. Separates what you control from what you do not and shows when later information changes the best first move.",
+   "key_question": "Which choices come later, after I learn something?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "what happens if I choose this and then",
+    "this decision has several stages",
+    "map out the scenarios and choices",
+    "should I wait for more information"
+   ],
+   "produces": "a tree of choices and chance events with values rolled back to the first move",
+   "failure_mode": "Leaving out the chance branches you would rather not think about.",
+   "time_cost": "deep",
+   "group": "either",
+   "steps": [
+    "Write the first decision and its options as branches.",
+    "After each option, add the chance events that could follow, with probabilities.",
+    "Add later decisions where you will choose again.",
+    "Assign a value to each end point.",
+    "Roll back from the end: average over chance nodes, take the best at decision nodes."
+   ],
+   "pairs_with": [
+    "decide.expected-value",
+    "decide.real-options"
+   ]
+  },
+  {
+   "slug": "decide.weighted-criteria",
+   "name": "Weighted criteria",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "formal",
+   "origin": {
+    "author": "Ralph Keeney & Howard Raiffa",
+    "work": "Decisions with Multiple Objectives",
+    "type": "academic",
+    "year": 1976
+   },
+   "source_verified": false,
+   "summary": "Name the criteria, weight them before scoring, score each option, sum. The value is in the weighting conversation; the total is only as good as the weights.",
+   "key_question": "Did I set the weights before I saw the scores?",
+   "status": "complete",
+   "tension_with": [
+    "decide.gut-check",
+    "decide.fast-frugal"
+   ],
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "compare these options",
+    "score these choices",
+    "which option is best overall",
+    "decision matrix"
+   ],
+   "produces": "a scoring table with weights set before scoring, totals, and a sensitivity check on the weights",
+   "failure_mode": "Adjusting weights after scoring until the preferred option wins.",
+   "time_cost": "medium",
+   "group": "either",
+   "steps": [
+    "List the options.",
+    "Name the criteria that matter.",
+    "Assign weights before looking at scores.",
+    "Score each option on each criterion.",
+    "Multiply and sum.",
+    "Check whether a reasonable change in weights changes the winner."
+   ],
+   "pairs_with": [
+    "decide.even-swaps",
+    "decide.gut-check"
+   ]
+  },
+  {
+   "slug": "decide.even-swaps",
+   "name": "Even swaps",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "formal",
+   "origin": {
+    "author": "John Hammond, Ralph Keeney, Howard Raiffa",
+    "work": "Even Swaps (HBR); Smart Choices",
+    "type": "academic",
+    "year": "1998; 1999"
+   },
+   "source_verified": false,
+   "summary": "Trade one criterion for another until two options are equal on it, then drop that criterion. Repeat until dominance settles the choice. Avoids arbitrary weights.",
+   "key_question": "What would I give up on one criterion to gain on another?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "too many criteria to compare",
+    "trade-offs between options",
+    "I can't weight these criteria",
+    "options better on different things"
+   ],
+   "produces": "a reduced comparison where criteria were eliminated by swaps until one option dominates",
+   "failure_mode": "Making swaps that are not truly equal in value to you.",
+   "time_cost": "deep",
+   "group": "either",
+   "steps": [
+    "Build a table of options against criteria.",
+    "Remove any option that is dominated by another.",
+    "Pick a criterion and adjust one option's score to match another's, compensating on a second criterion.",
+    "Once a criterion is equal across options, drop it.",
+    "Repeat until one option dominates."
+   ],
+   "pairs_with": [
+    "decide.weighted-criteria",
+    "decide.value-focused"
+   ]
+  },
+  {
+   "slug": "decide.value-focused",
+   "name": "Value-focused thinking",
+   "kind": "principle",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Ralph Keeney",
+    "work": "Value-Focused Thinking",
+    "type": "academic",
+    "year": 1992
+   },
+   "source_verified": false,
+   "summary": "Start from what you value, not from the options available. Options built from values beat the best of the given menu.",
+   "key_question": "What do I actually want, before I look at what is on offer?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "what do I actually want",
+    "none of these options feel right",
+    "what matters most to me here",
+    "start from my goals"
+   ],
+   "produces": "a list of the values at stake and new options built from them",
+   "failure_mode": "Listing values that are really features of the options already on the table.",
+   "time_cost": "medium",
+   "group": "either",
+   "pairs_with": [
+    "decide.values-check",
+    "decide.weighted-criteria"
+   ]
+  },
+  {
+   "slug": "decide.scenarios",
+   "name": "Scenario planning",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Pierre Wack; Peter Schwartz",
+    "work": "Scenarios: Uncharted Waters Ahead (HBR); The Art of the Long View",
+    "type": "industry",
+    "year": "1985; 1991"
+   },
+   "source_verified": false,
+   "summary": "Pick the two most uncertain and most important drivers, cross them into four plausible futures, and test each option against all four. The aim is robustness, not prediction.",
+   "key_question": "Does this option survive in all four futures, or only the one I expect?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "the future is too uncertain to plan",
+    "what if things change",
+    "plan for different futures",
+    "robust strategy"
+   ],
+   "produces": "four scenarios from two crossed uncertainties, with each option rated for robustness across them",
+   "failure_mode": "Picking drivers that are uncertain but unimportant, or important but predictable.",
+   "time_cost": "deep",
+   "group": "group",
+   "steps": [
+    "List the drivers that will shape the outcome.",
+    "Pick the two that are most uncertain and most important.",
+    "Cross them to make four futures and name each.",
+    "Write a short story for each future.",
+    "Test each option in all four; prefer the one that holds up across most."
+   ],
+   "pairs_with": [
+    "decide.real-options",
+    "decide.premortem"
+   ]
+  },
+  {
+   "slug": "decide.reference-class",
+   "name": "Reference-class forecast",
+   "kind": "method",
+   "mode": "constraint",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Daniel Kahneman & Dan Lovallo; Bent Flyvbjerg",
+    "work": "Timid Choices and Bold Forecasts; From Nobel Prize to Project Management",
+    "type": "academic",
+    "year": "1993; 2006"
+   },
+   "source_verified": false,
+   "summary": "Forecast from the outcomes of similar past cases (the outside view) first, then adjust for what is genuinely different about this case.",
+   "key_question": "How did similar cases actually turn out?",
+   "status": "complete",
+   "evidence_note": "Planning-fallacy correction with strong field evidence in large projects (Flyvbjerg). Depends on choosing the right reference class.",
+   "tension_with": [
+    "decide.recognition-primed"
+   ],
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "how long will this really take",
+    "will this project succeed",
+    "what usually happens in cases like this",
+    "estimate realistically"
+   ],
+   "produces": "a forecast starting from the outcomes of similar cases, with the adjustments made and why",
+   "failure_mode": "Choosing a reference class so narrow it contains only success stories.",
+   "time_cost": "medium",
+   "group": "either",
+   "steps": [
+    "Identify a class of similar past cases.",
+    "Find the distribution of their outcomes.",
+    "Place your case in that distribution as a starting estimate.",
+    "Adjust only for differences you can name and justify.",
+    "Keep the adjustment small unless the evidence is strong."
+   ],
+   "pairs_with": [
+    "decide.expected-value",
+    "decide.premortem"
+   ]
+  },
+  {
+   "slug": "decide.premortem",
+   "name": "Pre-mortem",
+   "kind": "method",
+   "mode": "audit",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Gary Klein",
+    "work": "Performing a Project Premortem (HBR)",
+    "type": "academic",
+    "year": 2007
+   },
+   "source_verified": false,
+   "summary": "Imagine it is a year later and the decision failed. Write why. Imagined certainty of failure frees people to name risks they would otherwise keep quiet.",
+   "key_question": "If this has failed a year from now, what is the most likely reason?",
+   "status": "complete",
+   "evidence_note": "Prospective hindsight increased the number of reasons generated by about 30% (Mitchell, Russo & Pennington 1989). Effect on decision outcomes less studied.",
+   "stages": [
+    "decide",
+    "stress_test"
+   ],
+   "use_when": [
+    "what could go wrong with this",
+    "before we commit",
+    "imagine this fails",
+    "find the risks"
+   ],
+   "produces": "a list of reasons the decision failed, ranked, with a mitigation for the top ones",
+   "failure_mode": "Writing generic risks instead of specific stories of failure.",
+   "time_cost": "quick",
+   "group": "either",
+   "steps": [
+    "Assume it is a year later and the decision has failed badly.",
+    "Everyone writes the reasons it failed, independently.",
+    "Pool the reasons and remove duplicates.",
+    "Rank by likelihood and impact.",
+    "Add mitigations or kill criteria for the top reasons."
+   ],
+   "pairs_with": [
+    "decide.kill-criteria",
+    "challenge.survival-score"
+   ]
+  },
+  {
+   "slug": "decide.real-options",
+   "name": "Keep options open",
+   "kind": "model",
+   "mode": "lens",
+   "evidence_class": "formal",
+   "origin": {
+    "author": "Avinash Dixit & Robert Pindyck",
+    "work": "Investment under Uncertainty",
+    "type": "academic",
+    "year": 1994
+   },
+   "source_verified": false,
+   "summary": "When a decision is irreversible and uncertainty will resolve, waiting or staging has value. Buy the right to decide later with a small first step.",
+   "key_question": "What small step buys me the right to decide later with better information?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "should I wait or commit now",
+    "can we keep our options open",
+    "this is hard to undo",
+    "do a small step first"
+   ],
+   "produces": "a staged plan with the small first step, what it buys, and when the full decision will be made",
+   "failure_mode": "Using delay as avoidance when uncertainty will not actually resolve.",
+   "time_cost": "medium",
+   "group": "either",
+   "pairs_with": [
+    "decide.doors",
+    "decide.value-of-information"
+   ]
+  },
+  {
+   "slug": "decide.value-of-information",
+   "name": "Value of information",
+   "kind": "model",
+   "mode": "lens",
+   "evidence_class": "formal",
+   "origin": {
+    "author": "Ronald Howard",
+    "work": "Information Value Theory (IEEE)",
+    "type": "academic",
+    "year": 1966
+   },
+   "source_verified": false,
+   "summary": "Information is worth paying for only if it could change the decision. If no plausible answer would change what you do, stop researching and decide.",
+   "key_question": "What could I learn that would actually change my choice?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "should I research more before deciding",
+    "do we need more data",
+    "analysis paralysis",
+    "is it worth finding out"
+   ],
+   "produces": "for each open question, whether any plausible answer would change the decision",
+   "failure_mode": "Researching questions whose answers would not change the choice.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.expected-value",
+    "decide.real-options"
+   ]
+  },
+  {
+   "slug": "decide.doors",
+   "name": "One-way and two-way doors",
+   "kind": "principle",
+   "mode": "constraint",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Jeff Bezos",
+    "work": "Amazon shareholder letter",
+    "type": "industry",
+    "year": 2015
+   },
+   "source_verified": false,
+   "summary": "Reversible decisions should be made fast and by few people; irreversible ones slowly and carefully. Most decisions are reversible and are treated as if they were not.",
+   "key_question": "If this goes wrong, can I walk back through the door?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "is this decision reversible",
+    "how carefully should I decide this",
+    "we're overthinking a small decision",
+    "can we undo this"
+   ],
+   "produces": "the decision classified as reversible or not, with the matching speed and number of people",
+   "failure_mode": "Treating an irreversible decision as reversible because it is convenient.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.real-options",
+    "decide.satisficing"
+   ]
+  },
+  {
+   "slug": "decide.explore-exploit",
+   "name": "Explore or exploit",
+   "kind": "model",
+   "mode": "lens",
+   "evidence_class": "formal",
+   "origin": {
+    "author": "Multi-armed bandit theory; Brian Christian & Tom Griffiths",
+    "work": "Algorithms to Live By",
+    "type": "academic",
+    "year": 2016
+   },
+   "source_verified": false,
+   "summary": "Explore while you have a long horizon left, exploit what you know works as the horizon shortens. Optimal stopping gives a rough rule for when to stop searching.",
+   "key_question": "How much time is left to benefit from exploring further?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "should I keep looking or settle",
+    "try new things or stick with what works",
+    "when to stop searching",
+    "how many options should I see"
+   ],
+   "produces": "a statement of the horizon left and whether to explore or exploit now, with a stopping rule",
+   "failure_mode": "Exploring indefinitely because the horizon is never stated.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.satisficing",
+    "decide.real-options"
+   ]
+  },
+  {
+   "slug": "decide.resulting",
+   "name": "Decision versus outcome",
+   "kind": "principle",
+   "mode": "audit",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Annie Duke",
+    "work": "Thinking in Bets",
+    "type": "practitioner",
+    "year": 2018
+   },
+   "source_verified": false,
+   "summary": "Judge a decision by the information and reasoning available at the time, not by how it turned out. A good outcome can follow a bad decision.",
+   "key_question": "Would I make the same call again with only what I knew then?",
+   "status": "complete",
+   "stages": [
+    "decide",
+    "review"
+   ],
+   "use_when": [
+    "was this a bad decision",
+    "it went wrong so we chose badly",
+    "review a past decision",
+    "judge my decision fairly"
+   ],
+   "produces": "a review separating the quality of the decision from the quality of the outcome",
+   "failure_mode": "Using the outcome as the main evidence about the decision.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.decision-journal",
+    "decide.decision-quality"
+   ]
+  },
+  {
+   "slug": "decide.kill-criteria",
+   "name": "Kill criteria",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Annie Duke",
+    "work": "Quit",
+    "type": "practitioner",
+    "year": 2022
+   },
+   "source_verified": false,
+   "summary": "Before committing, write the conditions and the date at which you will stop. Decided in advance, quitting does not depend on willpower in the moment.",
+   "key_question": "What would have to happen, by when, for me to stop?",
+   "status": "complete",
+   "stages": [
+    "decide",
+    "execute"
+   ],
+   "use_when": [
+    "when should I quit",
+    "how will I know to stop",
+    "set limits on this project",
+    "I keep throwing good money after bad"
+   ],
+   "produces": "written conditions and a date at which the commitment will be stopped",
+   "failure_mode": "Kill criteria so loose they will never trigger.",
+   "time_cost": "quick",
+   "group": "either",
+   "steps": [
+    "Write what you are committing to.",
+    "Write the signals that would show it is not working.",
+    "Turn each signal into a measurable condition.",
+    "Set a date to check.",
+    "Tell someone who will hold you to it."
+   ],
+   "pairs_with": [
+    "decide.decision-journal",
+    "challenge.update-triggers"
+   ]
+  },
+  {
+   "slug": "decide.satisficing",
+   "name": "Satisfice",
+   "kind": "principle",
+   "mode": "lens",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Herbert Simon; Barry Schwartz",
+    "work": "A Behavioral Model of Rational Choice; The Paradox of Choice",
+    "type": "academic",
+    "year": "1955; 2004"
+   },
+   "source_verified": false,
+   "summary": "Set the bar for 'good enough' and take the first option that clears it. Maximising across many options costs time and tends to lower satisfaction with the choice.",
+   "key_question": "What is good enough, and does an option already clear it?",
+   "status": "complete",
+   "evidence_note": "Maximizers report lower satisfaction (Schwartz et al. 2002); later replications show the effect depends on how maximizing is measured.",
+   "tension_with": [
+    "decide.vanishing-options"
+   ],
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "I can't choose between so many options",
+    "good enough is fine",
+    "I'm overwhelmed by choice",
+    "stop looking for the perfect one"
+   ],
+   "produces": "the 'good enough' bar written down and the first option that clears it",
+   "failure_mode": "Setting the bar after seeing the options, so it fits the favourite.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.explore-exploit",
+    "decide.doors"
+   ]
+  },
+  {
+   "slug": "decide.noise-audit",
+   "name": "Independent judgments first",
+   "kind": "method",
+   "mode": "audit",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Daniel Kahneman, Olivier Sibony, Cass Sunstein",
+    "work": "Noise",
+    "type": "academic",
+    "year": 2021
+   },
+   "source_verified": false,
+   "summary": "Break the decision into separate assessments, have each made independently before discussion, and combine them at the end. Reduces both noise and anchoring on the first opinion voiced.",
+   "key_question": "Were the assessments made independently before anyone discussed them?",
+   "status": "complete",
+   "evidence_note": "Mediating assessments protocol; aggregation of independent judgments is well supported (wisdom-of-crowds literature).",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "we all have different opinions",
+    "avoid groupthink in this decision",
+    "the first opinion always wins",
+    "combine judgments from the team"
+   ],
+   "produces": "independent assessments per dimension, recorded before discussion, and their combination",
+   "failure_mode": "Letting people see each other's ratings before making their own.",
+   "time_cost": "medium",
+   "group": "group",
+   "steps": [
+    "Break the decision into separate dimensions to assess.",
+    "Have each person rate each dimension independently and in writing.",
+    "Collect all ratings before any discussion.",
+    "Discuss the largest disagreements.",
+    "Combine the ratings using a rule agreed in advance."
+   ],
+   "pairs_with": [
+    "decide.weighted-criteria",
+    "decide.premortem"
+   ]
+  },
+  {
+   "slug": "decide.fear-setting",
+   "name": "Fear-setting",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Tim Ferriss",
+    "work": "TED talk; Tools of Titans",
+    "type": "practitioner",
+    "year": 2017
+   },
+   "source_verified": false,
+   "summary": "Define the worst case in detail, how to prevent it, how to repair it; list the benefits of partial success; then the cost of not acting in six months, one year, three years.",
+   "key_question": "What does inaction cost me over the next three years?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "I'm scared to make this change",
+    "what's the worst that could happen",
+    "should I take the leap",
+    "fear is stopping me"
+   ],
+   "produces": "a written worst case with prevention and repair, the benefits of partial success, and the cost of inaction over time",
+   "failure_mode": "Listing fears without writing how to prevent or repair each.",
+   "time_cost": "medium",
+   "group": "either",
+   "steps": [
+    "Define the worst outcomes in detail.",
+    "For each, write how to prevent it.",
+    "For each, write how to repair it if it happens.",
+    "Write the benefits of even partial success.",
+    "Write the cost of not acting at six months, one year and three years."
+   ],
+   "pairs_with": [
+    "decide.regret-minimization",
+    "decide.premortem"
+   ]
+  },
+  {
+   "slug": "decide.ten-ten-ten",
+   "name": "10/10/10",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Suzy Welch",
+    "work": "10-10-10",
+    "type": "practitioner",
+    "year": 2009
+   },
+   "source_verified": false,
+   "summary": "How will I feel about this in ten minutes, ten months, ten years? Separates the short-term emotion from the long-term consequence.",
+   "key_question": "How will this look in ten minutes, ten months and ten years?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "I'm too emotional to decide",
+    "how will I feel about this later",
+    "short-term pain versus long-term gain",
+    "this feels big right now"
+   ],
+   "produces": "three answers: how you will feel in ten minutes, ten months and ten years",
+   "failure_mode": "Answering the ten-year question with today's feelings.",
+   "time_cost": "quick",
+   "group": "either",
+   "steps": [
+    "State the decision.",
+    "Ask how you will feel about each option in ten minutes.",
+    "Ask the same for ten months.",
+    "Ask the same for ten years.",
+    "Note where the answers diverge and weigh the longer horizons."
+   ],
+   "pairs_with": [
+    "decide.regret-minimization",
+    "decide.self-distancing"
+   ]
+  },
+  {
+   "slug": "decide.regret-minimization",
+   "name": "Regret minimisation",
+   "kind": "principle",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Jeff Bezos",
+    "work": "Interviews on leaving D. E. Shaw (1994)",
+    "type": "practitioner",
+    "year": 1994
+   },
+   "source_verified": false,
+   "summary": "Project yourself to age eighty and ask which choice you would regret not having made. Useful for bold choices; biased toward action.",
+   "key_question": "At eighty, which choice would I regret not having made?",
+   "status": "complete",
+   "tension_with": [
+    "decide.expected-value"
+   ],
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "will I regret not doing this",
+    "bold career move",
+    "should I take the risk",
+    "what would my older self think"
+   ],
+   "produces": "the choice you would regret not having made, viewed from late in life",
+   "failure_mode": "Using it for decisions where caution matters more than boldness.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.fear-setting",
+    "decide.ten-ten-ten"
+   ]
+  },
+  {
+   "slug": "decide.fast-frugal",
+   "name": "Fast and frugal heuristics",
+   "kind": "model",
+   "mode": "lens",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Gerd Gigerenzer & Daniel Goldstein",
+    "work": "Reasoning the Fast and Frugal Way (Psychological Review)",
+    "type": "academic",
+    "year": 1996
+   },
+   "source_verified": false,
+   "summary": "In uncertain environments, simple rules that use one good cue can match or beat complex models. Choose on the most important reason; stop when it discriminates.",
+   "key_question": "What is the single most important reason, and does it already decide this?",
+   "status": "complete",
+   "evidence_note": "Take-the-best matched or beat regression in out-of-sample prediction in several domains (Gigerenzer & Goldstein 1996; Czerlinski et al. 1999).",
+   "tension_with": [
+    "decide.weighted-criteria"
+   ],
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "I need to decide quickly",
+    "too much information",
+    "what's the one thing that matters",
+    "simple rule for choosing"
+   ],
+   "produces": "the one cue chosen and the decision it gives",
+   "failure_mode": "Using a simple rule in an environment where the cue does not predict well.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.satisficing",
+    "decide.recognition-primed"
+   ]
+  },
+  {
+   "slug": "decide.recognition-primed",
+   "name": "Recognition-primed decision",
+   "kind": "model",
+   "mode": "lens",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Gary Klein",
+    "work": "Sources of Power",
+    "type": "academic",
+    "year": 1998
+   },
+   "source_verified": false,
+   "summary": "Experts match the situation to a pattern, simulate the first plausible action and take it if it works. Trust it where you have real experience with fast feedback, not elsewhere.",
+   "key_question": "Do I have real experience with fast feedback in this kind of situation?",
+   "status": "complete",
+   "evidence_note": "Naturalistic studies of firefighters and commanders (Klein 1998). Valid only where the environment is regular and feedback is quick (Kahneman & Klein 2009).",
+   "tension_with": [
+    "decide.reference-class"
+   ],
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "I've seen this situation before",
+    "trust my instinct",
+    "my gut says do this",
+    "should I trust my experience here"
+   ],
+   "produces": "the pattern matched, the first action simulated, and whether your experience is valid in this domain",
+   "failure_mode": "Trusting intuition in a domain without fast, clear feedback.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.reference-class",
+    "decide.premortem"
+   ]
+  },
+  {
+   "slug": "decide.somatic-marker",
+   "name": "Body signal",
+   "kind": "model",
+   "mode": "audit",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Antonio Damasio",
+    "work": "Descartes' Error",
+    "type": "academic",
+    "year": 1994
+   },
+   "source_verified": false,
+   "summary": "Emotional and bodily signals carry learned information about past outcomes and help narrow options. Treat the feeling as data to examine, not as a verdict.",
+   "key_question": "What is my body telling me, and what experience could that signal come from?",
+   "status": "complete",
+   "evidence_note": "Somatic marker hypothesis; the supporting Iowa Gambling Task evidence is contested (Dunn, Dalgleish & Lawrence 2006). Use as a prompt, not as evidence.",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "this feels wrong but I can't say why",
+    "I have a bad feeling about this",
+    "my body is telling me something",
+    "uneasy about this option"
+   ],
+   "produces": "the feeling named and examined for what past experience it might be signalling",
+   "failure_mode": "Treating the feeling as a verdict instead of as data to examine.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.gut-check",
+    "frame.affect-labeling"
+   ]
+  },
+  {
+   "slug": "decide.gut-check",
+   "name": "Coin-flip gut check",
+   "kind": "method",
+   "mode": "audit",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Piet Hein; Mariela Jaffé et al.",
+    "work": "A Psychological Tip (grook); Flipping a coin to decide (study)",
+    "type": "academic",
+    "year": "1960s; 2019"
+   },
+   "source_verified": false,
+   "summary": "Assign each option to a side of a coin and flip it. The relief or disappointment you feel when it lands reveals the preference you already had.",
+   "key_question": "When the coin landed, was I relieved or disappointed?",
+   "status": "complete",
+   "evidence_note": "Coin flips helped people identify their preference and increased decision confidence (Jaffé, Reutner & Greifeneder 2019). Single research group.",
+   "tension_with": [
+    "decide.weighted-criteria"
+   ],
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "I can't decide between two options",
+    "what do I really want",
+    "flip a coin for me",
+    "I'm torn between these"
+   ],
+   "produces": "the reaction to the coin flip and the preference it reveals",
+   "failure_mode": "Obeying the coin instead of noticing the reaction to it.",
+   "time_cost": "quick",
+   "group": "either",
+   "steps": [
+    "Assign each option to a side of a coin.",
+    "Flip it.",
+    "Notice your reaction the moment it lands: relief or disappointment.",
+    "Write down the preference the reaction shows.",
+    "Decide, using the coin's result only as a prompt."
+   ],
+   "pairs_with": [
+    "decide.somatic-marker",
+    "decide.values-check"
+   ]
+  },
+  {
+   "slug": "decide.self-distancing",
+   "name": "Advise a friend",
+   "kind": "method",
+   "mode": "audit",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Ethan Kross & Igor Grossmann",
+    "work": "Boosting wisdom (J. Exp. Psychology); Solomon's paradox",
+    "type": "academic",
+    "year": "2012; 2014"
+   },
+   "source_verified": false,
+   "summary": "Describe the decision as if a friend faced it, or in the third person, and say what you would advise. Distance improves reasoning about one's own situation.",
+   "key_question": "What would I tell a friend to do?",
+   "status": "complete",
+   "evidence_note": "Self-distancing improved wise reasoning (Grossmann & Kross 2014). Replicated across several studies.",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "what would I tell a friend",
+    "I'm too close to this",
+    "give me perspective",
+    "I can't think clearly about my own situation"
+   ],
+   "produces": "the advice you would give a friend facing the same decision",
+   "failure_mode": "Describing the friend's situation with details that make it easier than yours.",
+   "time_cost": "quick",
+   "group": "either",
+   "steps": [
+    "Describe the situation as if a friend were facing it.",
+    "Use their name or the third person, not 'I'.",
+    "Write the advice you would give them.",
+    "Compare it with what you are inclined to do yourself."
+   ],
+   "pairs_with": [
+    "decide.ten-ten-ten",
+    "decide.regret-minimization"
+   ]
+  },
+  {
+   "slug": "decide.discernment",
+   "name": "Discernment",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Ignatius of Loyola",
+    "work": "Spiritual Exercises",
+    "type": "tradition",
+    "year": 1548
+   },
+   "source_verified": false,
+   "summary": "Notice which option brings lasting peace and which brings agitation over several days; imagine advising a stranger; imagine looking back at the end of life. A values-and-feelings method from a religious tradition, usable without the faith.",
+   "key_question": "Over several days, which option leaves me settled and which leaves me unsettled?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "which choice brings me peace",
+    "a decision about my calling",
+    "I want to decide in line with my faith",
+    "a life decision that matters deeply"
+   ],
+   "produces": "a record over several days of the consolation or agitation each option brings, plus the stranger and deathbed views",
+   "failure_mode": "Deciding on a single day's mood instead of the pattern over several days.",
+   "time_cost": "deep",
+   "group": "solo",
+   "steps": [
+    "State the choice and set aside a few days for it.",
+    "Each day, imagine having chosen one option and notice whether you feel lasting peace or agitation.",
+    "Record what you notice.",
+    "Imagine advising a stranger in the same position.",
+    "Imagine looking back at the choice at the end of your life.",
+    "Choose the option the pattern points to."
+   ],
+   "pairs_with": [
+    "decide.values-check",
+    "decide.regret-minimization"
+   ]
+  },
+  {
+   "slug": "decide.values-check",
+   "name": "Values alignment",
+   "kind": "method",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Steven Hayes (acceptance and commitment therapy)",
+    "work": "Get Out of Your Mind and Into Your Life",
+    "type": "practitioner",
+    "year": 2005
+   },
+   "source_verified": false,
+   "summary": "Name your stated values, then check each option against them. The option you lean toward but that contradicts your values usually signals avoidance.",
+   "key_question": "Which option moves me toward what I say I value?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "does this fit my values",
+    "I'm leaning toward this but something's off",
+    "align my choice with what I care about",
+    "am I avoiding something"
+   ],
+   "produces": "each option checked against your stated values, with any contradiction named",
+   "failure_mode": "Listing aspirational values you do not actually act on.",
+   "time_cost": "quick",
+   "group": "either",
+   "steps": [
+    "Write your three to five core values in your own words.",
+    "For each option, mark whether it supports or contradicts each value.",
+    "Look at the option you lean toward.",
+    "If it contradicts your values, ask what it lets you avoid."
+   ],
+   "pairs_with": [
+    "decide.value-focused",
+    "decide.discernment"
+   ]
+  },
+  {
+   "slug": "decide.hell-yeah",
+   "name": "Hell yeah or no",
+   "kind": "principle",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Derek Sivers",
+    "work": "Hell Yeah or No (essay)",
+    "type": "practitioner",
+    "year": 2009
+   },
+   "source_verified": false,
+   "summary": "For optional commitments: if it is not an enthusiastic yes, it is a no. Protects time for the few things that matter. Wrong for obligations and for decisions with no enthusiastic option.",
+   "key_question": "Is this an enthusiastic yes, and if not, why is it not a no?",
+   "status": "complete",
+   "stages": [
+    "decide"
+   ],
+   "use_when": [
+    "should I say yes to this",
+    "I've been invited to something",
+    "too many commitments",
+    "should I take on this project"
+   ],
+   "produces": "a yes or no based on whether the response is an enthusiastic yes",
+   "failure_mode": "Applying it to obligations or to choices where no option is exciting.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "decide.values-check",
+    "decide.satisficing"
+   ]
+  },
+  {
+   "slug": "decide.decision-journal",
+   "name": "Decision journal",
+   "kind": "method",
+   "mode": "audit",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Daniel Kahneman (recommended practice); Annie Duke",
+    "work": "Thinking in Bets",
+    "type": "practitioner",
+    "year": 2018
+   },
+   "source_verified": false,
+   "summary": "Write the decision, the options, what you expect to happen and how confident you are, before you know the result. The only reliable defence against hindsight bias.",
+   "key_question": "What do I expect to happen, and how sure am I, written down now?",
+   "status": "complete",
+   "stages": [
+    "decide",
+    "review"
+   ],
+   "use_when": [
+    "record this decision",
+    "learn from my decisions",
+    "keep track of my predictions",
+    "avoid hindsight bias"
+   ],
+   "produces": "a journal entry with the decision, options, expected outcome and confidence, written before the result",
+   "failure_mode": "Writing the entry after the result is known.",
+   "time_cost": "quick",
+   "group": "either",
+   "steps": [
+    "Write the decision and the date.",
+    "Write the options you considered.",
+    "Write what you expect to happen and how confident you are.",
+    "Write how you feel physically and mentally.",
+    "Set a date to review the entry against what happened."
+   ],
+   "pairs_with": [
+    "decide.resulting",
+    "decide.kill-criteria"
+   ]
+  },
+  {
+   "slug": "challenge.survival-score",
+   "name": "Survival score",
+   "kind": "method",
+   "mode": "audit",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Panta Rhei (original)",
+    "work": "Panta Rhei design",
+    "type": "practitioner",
+    "year": 2026,
+    "note": "Original to Panta Rhei; describe as such."
+   },
+   "source_verified": false,
+   "summary": "After the attacks, rate how much of the idea survives on a 0–10 scale, with the rule: one fatal flaw caps the score at 3, regardless of how many strengths there are.",
+   "key_question": "After the strongest attack, how much of this is still standing?",
+   "status": "complete",
+   "stages": [
+    "stress_test"
+   ],
+   "use_when": [
+    "how much of this idea survives",
+    "score this plan after the critique",
+    "is this idea still worth pursuing",
+    "how bad are these flaws"
+   ],
+   "produces": "a 0 to 10 survival score with the fatal flaw, if any, and the strongest surviving element",
+   "failure_mode": "Averaging strengths and weaknesses so a fatal flaw is diluted.",
+   "time_cost": "quick",
+   "group": "either",
+   "steps": [
+    "List the attacks that landed and those that did not.",
+    "Check whether any attack is fatal on its own.",
+    "If one is, cap the score at 3.",
+    "Otherwise rate from 0 to 10 how much of the idea survives.",
+    "Write the strongest surviving element and the weakest link."
+   ],
+   "pairs_with": [
+    "decide.weighted-criteria",
+    "decide.premortem"
+   ],
+   "borrowed_from": "pantarhei-challenge"
+  },
+  {
+   "slug": "challenge.update-triggers",
+   "name": "Pre-commit update triggers",
+   "kind": "principle",
+   "mode": "audit",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Philip Tetlock & Dan Gardner",
+    "work": "Superforecasting",
+    "type": "academic",
+    "year": 2015
+   },
+   "source_verified": false,
+   "summary": "Before seeing new evidence, state what result would move your estimate and by how much. Prevents re-reading any evidence as confirmation.",
+   "key_question": "What result would make me change my mind, decided before I see it?",
+   "status": "complete",
+   "stages": [
+    "stress_test"
+   ],
+   "use_when": [
+    "what would change my mind",
+    "set criteria before seeing the results",
+    "I keep reading everything as confirmation",
+    "how should this new data change my view"
+   ],
+   "produces": "a pre-registered list of results and the size of the update each would cause",
+   "failure_mode": "Writing triggers so vague that any result can be read as meeting or missing them.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "challenge.crux",
+    "decide.kill-criteria"
+   ],
+   "borrowed_from": "pantarhei-challenge"
+  },
+  {
+   "slug": "create.diverge-then-converge",
+   "name": "Diverge, then converge",
+   "kind": "principle",
+   "mode": "lens",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "J. P. Guilford; Alex Osborn",
+    "work": "The Nature of Human Intelligence; Applied Imagination",
+    "type": "academic",
+    "year": "1967; 1953",
+    "note": "Guilford coined divergent/convergent production; Osborn's deferred-judgment rule.",
+    "url": "https://kansalliskirjasto.finna.fi/Record/fikka.196746"
+   },
+   "source_verified": true,
+   "summary": "Generate first with judgment switched off, evaluate afterwards in a separate pass. Mixing the two kills weak-but-promising ideas before they can be improved.",
+   "key_question": "Am I judging ideas while I am still supposed to be producing them?",
+   "status": "complete",
+   "card": "No judging for the next ten ideas. Write the bad ones too.",
+   "stages": [
+    "generate"
+   ],
+   "use_when": [
+    "I keep shooting down my own ideas",
+    "we argue about ideas as soon as they are said",
+    "I want a big list first and a shortlist later",
+    "every idea gets criticised in the room"
+   ],
+   "produces": "two separated passes: an unjudged idea list, then a shortlist",
+   "failure_mode": "The judging pass never happens and the unfiltered list is treated as the result.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "create.idea-quota",
+    "create.brainwriting"
+   ],
+   "borrowed_from": "pantarhei-brainstorm"
+  },
+  {
+   "slug": "frame.affect-labeling",
+   "name": "Name the feeling first",
+   "kind": "principle",
+   "mode": "audit",
+   "evidence_class": "empirical",
+   "origin": {
+    "author": "Matthew Lieberman et al.",
+    "work": "Putting feelings into words (Psychological Science)",
+    "type": "academic",
+    "year": 2007
+   },
+   "source_verified": false,
+   "summary": "Putting a precise word to an emotion lowers its intensity. When a problem is charged, label the feeling before framing the problem, or the feeling frames it.",
+   "key_question": "What exactly am I feeling about this, in one precise word?",
+   "status": "complete",
+   "evidence_note": "Affect labeling reduced amygdala response (Lieberman et al. 2007). Effect replicated in several paradigms; self-help translation is extrapolation.",
+   "stages": [
+    "frame"
+   ],
+   "use_when": [
+    "I'm too upset to think about this",
+    "this situation makes me angry",
+    "I'm anxious about the decision",
+    "I can't think straight"
+   ],
+   "produces": "one or two precise words for the feeling, written before the problem is framed",
+   "failure_mode": "Using a vague label like 'stressed' that names nothing specific.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "frame.control-map",
+    "frame.coaching-questions"
+   ],
+   "borrowed_from": "pantarhei-reframe"
+  },
+  {
+   "slug": "frame.control-map",
+   "name": "What is in my control",
+   "kind": "model",
+   "mode": "constraint",
+   "evidence_class": "heuristic",
+   "origin": {
+    "author": "Epictetus; Stephen Covey",
+    "work": "Enchiridion; The 7 Habits of Highly Effective People",
+    "type": "tradition",
+    "year": "c. 125; 1989"
+   },
+   "source_verified": false,
+   "summary": "Sort every element of the situation into what you control, what you influence and what you neither control nor influence. Effort goes to the first two.",
+   "key_question": "Which part of this is actually mine to act on?",
+   "status": "complete",
+   "stages": [
+    "frame"
+   ],
+   "use_when": [
+    "what can I actually change",
+    "I'm worrying about things I can't control",
+    "where should I focus my energy",
+    "everything feels out of my hands"
+   ],
+   "produces": "three lists: what you control, what you influence, what you do neither, with the next action for the first two",
+   "failure_mode": "Putting other people's choices in the control column.",
+   "time_cost": "quick",
+   "group": "either",
+   "pairs_with": [
+    "frame.how-might-we",
+    "decide.doors"
+   ],
+   "borrowed_from": "pantarhei-reframe"
+  }
+ ]
+}

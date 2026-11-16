@@ -1,0 +1,225 @@
+{
+  "cases": [
+    {
+      "text": "Should I take the startup offer or stay at my current job?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Help me decide between these three apartments",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Pros and cons of renting vs buying in Lisbon",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Is it worth paying for the MBA?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Go or no-go on launching next week given the open bugs?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Weigh these trade-offs for me: speed, cost, quality",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "I can't choose which candidate to hire",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Pros and cons of quitting coffee",
+      "expect": "pantarhei-decide",
+      "contested": true
+    },
+    {
+      "text": "What's the capital of Australia?",
+      "expect": "none"
+    },
+    {
+      "text": "Fix this bug in my Python function",
+      "expect": "none"
+    },
+    {
+      "text": "Convert this PDF to Word",
+      "expect": "none"
+    },
+    {
+      "text": "Schedule a meeting with Mark on Friday",
+      "expect": "none"
+    },
+    {
+      "text": "Summarize this article",
+      "expect": "none"
+    },
+    {
+      "text": "Write a SQL query that groups sales by region",
+      "expect": "none"
+    },
+    {
+      "text": "Translate this paragraph into French",
+      "expect": "none"
+    },
+    {
+      "text": "Should I accept the promotion if it means relocating?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Help me choose between two job offers: one pays more, one is more interesting",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Which option is better: pay off the mortgage early or invest?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Is it worth buying an electric car?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "I need to decide whether to let an underperforming employee go",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Weigh up the pros and cons of moving to a smaller city",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Help me pick between React and Vue for our new project",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Which vendor should we go with? Here are three quotes",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Should we launch now or wait another quarter?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "I'm torn between grad school and a job. Help me decide",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Go or no-go: acquiring the smaller competitor",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Choose between three wedding venues, I have photos and prices",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "What are the trade-offs of taking venture money versus staying bootstrapped?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Should I tell my manager about my other offer?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Do I commit to the house at this price or keep looking?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Which of these two candidates should we hire?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "Should I sell my shares now or hold?",
+      "expect": "pantarhei-decide"
+    },
+    {
+      "text": "What's 17% of 2,340?",
+      "expect": "none"
+    },
+    {
+      "text": "Write a Python script that renames files by date",
+      "expect": "none"
+    },
+    {
+      "text": "What time is it in Tokyo?",
+      "expect": "none"
+    },
+    {
+      "text": "Merge these two PDFs into one",
+      "expect": "none"
+    },
+    {
+      "text": "Draft a Word document with a project status template",
+      "expect": "none"
+    },
+    {
+      "text": "What does the word 'ephemeral' mean?",
+      "expect": "none"
+    },
+    {
+      "text": "Move my 3pm meeting to Thursday",
+      "expect": "none"
+    },
+    {
+      "text": "Review this pull request for security issues",
+      "expect": "none"
+    },
+    {
+      "text": "Who won the World Cup in 2014?",
+      "expect": "none"
+    },
+    {
+      "text": "Explain what a mutex is",
+      "expect": "none"
+    },
+    {
+      "text": "Rewrite this email to sound more polite",
+      "expect": "none"
+    },
+    {
+      "text": "Give me a recipe for banana bread",
+      "expect": "none"
+    },
+    {
+      "text": "Convert 5 miles to kilometres",
+      "expect": "none"
+    },
+    {
+      "text": "Why is my React component re-rendering twice?",
+      "expect": "none"
+    },
+    {
+      "text": "Proofread this paragraph for typos",
+      "expect": "none"
+    },
+    {
+      "text": "Create a spreadsheet of my monthly expenses",
+      "expect": "none"
+    },
+    {
+      "text": "Find free time on my calendar next week",
+      "expect": "none"
+    },
+    {
+      "text": "Summarize the plot of Hamlet",
+      "expect": "none"
+    },
+    {
+      "text": "Is my plan to leave my job a good idea?",
+      "expect": "pantarhei-decide",
+      "contested": true
+    },
+    {
+      "text": "Help me think about whether to move",
+      "expect": "pantarhei-decide",
+      "contested": true
+    },
+    {
+      "text": "What are the downsides of working abroad?",
+      "expect": "pantarhei-decide",
+      "contested": true
+    },
+    {
+      "text": "Compare these three strategies",
+      "expect": "pantarhei-decide",
+      "contested": true
+    }
+  ]
+}

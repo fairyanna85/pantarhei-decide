@@ -1,0 +1,17 @@
+{
+  "name": "pantarhei-decide",
+  "owner": {
+    "name": "fairyanna85"
+  },
+  "metadata": {
+    "description": "Decision-making skill: a council of frameworks that weighs the numbers and the human factors."
+  },
+  "plugins": [
+    {
+      "name": "pantarhei-decide",
+      "source": "./",
+      "description": "Decision-making skill: a council of frameworks that weighs the numbers and the human factors.",
+      "version": "0.1.0"
+    }
+  ]
+}

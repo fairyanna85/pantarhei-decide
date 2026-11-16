@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-label="Council seat: Coroner">
+<rect width="240" height="240" rx="28" fill="#F6F4EF"/>
+<circle cx="120" cy="108" r="76" fill="none" stroke="#9B6200" stroke-width="5"/>
+<path d="M120 62 V154 M82 92 H158" stroke="#14161A" stroke-width="9" stroke-linecap="round"/>
+<text x="120" y="218" text-anchor="middle" font-family="'Space Grotesk','Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="600" font-size="24" fill="#14161A">Coroner</text></svg>
