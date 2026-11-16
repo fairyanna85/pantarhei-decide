@@ -15,8 +15,6 @@ A decision-making skill for Claude, Claude Code and Hermes: a council of framewo
 
 Hard choices get either a pros-and-cons list or a confident verdict. Panta Rhei Decide seats a council of advisors, each speaking for a decision method (expected value, pre-mortem, regret, the gut check), and a Chair who reconciles them and records the dissent. You get the decision, the kill criteria that would reverse it and a journal entry to check it against later.
 
-<p align="center"><img src="assets/demo.gif" alt="A Decide session: five advisors give verdicts with evidence classes, and the Chair records the decision, dissent and kill criteria" width="85%"></p>
-
 ## Try it
 
 Say any of these after installing:
