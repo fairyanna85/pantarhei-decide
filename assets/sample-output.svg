@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="801" height="298" viewBox="0 0 801 298">
+<rect width="801" height="298" rx="8" fill="#14161A"/>
+<g font-family="'JetBrains Mono','DejaVu Sans Mono',Menlo,Consolas,monospace" font-size="13" fill="#F6F4EF">
+<text x="18" y="27" xml:space="preserve">THE COUNCIL · Take the startup offer, or stay?            Door: one-way-ish (reversible in ~2 yrs)</text>
+<text x="18" y="45" xml:space="preserve">─────────────────────────────────────────────────────────────────────────────────────</text>
+<text x="18" y="63" xml:space="preserve">ACTUARY  [formal/empirical]  Comp roughly equal; base rate for senior lateral moves that</text>
+<text x="18" y="81" xml:space="preserve">         are rated &quot;worth it&quot; at 2 years is favourable when role scope grows. → TAKE (0.6)</text>
+<text x="18" y="99" xml:space="preserve">CORONER  [empirical]         It failed in 18 months because… the org is new and its</text>
+<text x="18" y="117" xml:space="preserve">         leadership churned. Kill criterion: no scope increase by month 9. → TAKE, with exit</text>
+<text x="18" y="135" xml:space="preserve">SCOUT    [formal]            One call with two people who left that company changes the estimate</text>
+<text x="18" y="153" xml:space="preserve">         more than any other information. Do that before signing. → WAIT ONE WEEK</text>
+<text x="18" y="171" xml:space="preserve">FUTURE YOU [heuristic]       At 80: regret staying more than regret trying. → TAKE</text>
+<text x="18" y="189" xml:space="preserve">GUT      [empirical, weak]   Coin landed on STAY; you felt relief that it was a coin. → TAKE</text>
+<text x="18" y="207" xml:space="preserve">─────────────────────────────────────────────────────────────────────────────────────</text>
+<text x="18" y="225" xml:space="preserve">CHAIR    Take it, after the Scout&#x27;s one-week check.</text>
+<text x="18" y="243" xml:space="preserve">         Dissent: the Scout. Its condition is cheap, so it is adopted, not overruled.</text>
+<text x="18" y="261" xml:space="preserve">         Kill criteria: no scope increase by month 9, or the sponsoring VP leaves.</text>
+<text x="18" y="279" xml:space="preserve">         Reverses if: the two calls describe churn as structural, not personal.</text>
+</g>
+</svg>
